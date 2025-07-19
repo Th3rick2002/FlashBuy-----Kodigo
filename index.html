@@ -3,40 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <title>FlashBuy</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/Home.css">
 </head>
 <body>
+    <header class="header">
+        <div class="header__main">
+            <div class="header__logo--container">
+                <button id="hamburger-btn" class="header__logo--hamburgerButtom">☰</button>
+                <div class="header__logo--title">
+                    <a href="#">
+                        FlashBuy
+                    </a>
+                </div>
+            </div>
 
-    <header class="">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid background">
-                <a class="navbar-brand" href="#">FlashBuy</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="#">Moda</a>
-                        <a class="nav-link" href="#">ejemplo 3</a>
-                        <a class="nav-link" href="#">ejemplo 4</a>
-                        <a class="nav-link" href="#">ejemplo 5</a>
+            <div class="header__nav">
+                <nav class="header__nav--list">
+                    <ul class="header__nav--list--items">
+                        <li id="profile" class="header__nav--list--item">
+                            <a href="#"><img src="./assets/logos/Profile.svg" alt="profile"></a>
+                        </li>
+                        <li id="shop-card" class="header__nav--list--item">
+                            <a href="#"><img src="./assets/logos/carrito-white.svg" alt="carrito"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="header__aside">
+            <nav>
+                <ul>
+                    <li><a class="nav-link" href="#">Inicio</a></li>
+                    <li><a class="nav-link" href="#">Moda</a></li>
+                    <li><a class="nav-link" href="#">ejemplo 3</a></li>
+                    <li><a class="nav-link" href="#">ejemplo 4</a></li>
+                    <li><a class="nav-link" href="#">ejemplo 5</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <aside id="side-menu" class="side-menu">
+        <button id="close-btn" class="side-menu--close-btn">x</button>
+        <ul>
+            <li><a class="nav-link" href="#">Inicio</a></li>
+            <li><a class="nav-link" href="#">Moda</a></li>
+            <li><a class="nav-link" href="#">ejemplo 3</a></li>
+            <li><a class="nav-link" href="#">ejemplo 4</a></li>
+            <li><a class="nav-link" href="#">ejemplo 5</a></li>
+        </ul>
+    </aside>
+
+    <aside id="cart-menu" class="cart-menu">
+        <div class="cart-menu__container">
+            <div class="cart-menu__closedBtn">
+                <button id="close-cart-btn" class="side-cart--close-btn">x</button>
+            </div>
+
+            <div class="cart-menu__table-content">
+                <h3>Carrito de compras</h3>
+                <table id="table-cart" class="cart-menu__table">
+                    <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody id="table-row" class="table-row">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="cart-menu__actions">
+                <button class="cart--cleanBtn" onclick="clearCart()">Vaciar Carrito</button>
+                <button class="cart--buyBtn">Pagar</button>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <section class="slideshow">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div>
+                        <img
+                                id="imgSlides1"
+                                src="assets/carousel-img-1.gif"
+                                alt="slides-1"
+                        >
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div>
+                        <img
+                                id="imgSlides2"
+                                src="assets/carousel-img-2.webp"
+                                alt="slides-2"
+                        >
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div>
+                        <img
+                                id="imgSlides3"
+                                src="assets/carousel-img-3.webp"
+                                alt="slides-3"
+                        >
+                    </div>
+                </div>
+
+                <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+                <button class="next" onclick="plusSlides(1)">&#10095;</button>
+
+                <div class="mySlides__items">
+                    <div class="mySlides__items--buttons">
+
                     </div>
                 </div>
             </div>
-        </nav>
-    </header>
+        </section>
 
-    <main class="container">
+        <section class="categories-container">
+            <h3>Nuestras categorias</h3>
+            <div class="categories-content">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Moda</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Ropa para dama y caballero</h6>
+                        <p class="card-text">Las mejores marcas en ropa</p>
+                        <a href="#" class="card-link">Ver más</a>
+                    </div>
+                </div>
 
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-
-    <footer class="">
-        <p>Derechos reservados - Grupo #4</p>
+    <footer class="footer">
+        <div class="footer__container">
+            <div>
+                <div class="footer__container--logo">
+                    <h2>FlashBuy</h2>
+                </div>
+                <div class="footer__container--contact">
+                    <p>Suscríbete para obtener las mejores ofertas</p>
+                    <label class="footer__container--label">
+                        <input type="text" placeholder="Email">
+                        <button>Suscribirse</button>
+                    </label>
+                    <p><img class="icon" src="./assets/logos/phone-flip-svgrepo-com.svg" alt="phone"> 2298-3777</p>
+                </div>
+                <div class="footer__container--social-media">
+                    <p>Siguenos en nuestras redes sociales</p>
+                    <div class="footer__container--social-media-icon">
+                        <a href="https://www.facebook.com/">
+                            <img class="social-media-icon" src="./assets/logos/facebook-round-svgrepo-com.svg" alt="facebook">
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <img class="social-media-icon" src="./assets/logos/instagram-round-svgrepo-com.svg" alt="instagram">
+                        </a>
+                        <a href="https://www.youtube.com/">
+                            <img class="social-media-icon" src="./assets/logos/youtube-168-svgrepo-com.svg" alt="youtube">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__container--info-items">
+                <h4 class="footer__container--title">CORPORATIVO</h4>
+                <ul class="footer__container--list">
+                    <li><a class="footer-link" href="#">Quienes Somos</a></li>
+                    <li><a class="footer-link" href="#">Visión y Misión</a></li>
+                    <li><a class="footer-link" href="#">Historia</a></li>
+                    <li><a class="footer-link" href="#">Sucursales</a></li>
+                    <li><a class="footer-link" href="#">Servicios</a></li>
+                </ul>
+            </div>
+            <div class="footer__container--info-items">
+                <h4 class="footer__container--title">PROGRAMAS</h4>
+                <ul class="footer__container--list">
+                    <li><a class="footer-link" href="#">Certificados de Regalo</a></li>
+                    <li><a class="footer-link" href="#">Garantias</a></li>
+                    <li><a class="footer-link" href="#">Plan Pro</a></li>
+                    <li><a class="footer-link" href="#">Credito</a></li>
+                    <li><a class="footer-link" href="#">Marketplace</a></li>
+                </ul>
+            </div>
+            <div class="footer__container--info-items">
+                <h4 class="footer__container--title">SERVICIO AL CLIENTE</h4>
+                <ul class="footer__container--list">
+                    <li><a class="footer-link" href="#">Politica de Devoluciones</a></li>
+                    <li><a class="footer-link" href="#">Cotactenos</a></li>
+                    <li><a class="footer-link" href="#">Seguridad del Sitio</a></li>
+                    <li><a class="footer-link" href="#">Politica de Privacidad</a></li>
+                    <li><a class="footer-link" href="#">Terminos y Condiciones</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
 </body>
+<script src="./script/home.js"></script>
+<script src="./script/slideshow.js"></script>
+<script src="./script/cart.js"></script>
 </html>
