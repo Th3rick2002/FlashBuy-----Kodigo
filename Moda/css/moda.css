@@ -1,0 +1,212 @@
+
+
+:root {
+    --primary-color: #ff9900;
+    --secondary-color: #146eb4;
+    --dark-color: #000000;
+    --dark-background-color: #232f3e;
+    --light-background-color: #f2f2f2;
+}
+.background {
+    background-color: var(--light-background-color);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,body{
+   height: 100%;
+  
+}
+.container-moda{
+    width: 100%;
+    height: 100vh;
+}
+
+.carrusel-container {
+  width: 100%;
+  height: 75vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+  background-color: gray;
+}
+
+.slide {
+  min-width: 100%;
+  height: 75vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.slide-texto {
+  position: absolute;
+  top: 25%;
+  left: 16%; 
+  text-align: left;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.slide-texto h2 {
+  font-size: 3rem; 
+  margin-bottom: 2.5rem;
+ 
+}
+
+.slide-texto p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem; 
+}
+.boton-ver-mas {
+  background-color: var(--primary-color); 
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.boton-ver-mas:hover {
+  background-color: var(--secondary-color); /* Azul vibrante */
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+
+
+.slide-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(198, 198, 245);
+   background: linear-gradient(to bottom, #dbeafe, #c7d2fe); /* azul claro a lila */
+}
+
+.slide-grid img {
+  width: 400px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  
+}
+
+.slide-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+.slider-controls {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.slider-controls button {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.container-moda .main-container .ropa-container{
+   
+   margin-bottom: 4rem;
+      padding-left: 4rem ;
+    padding-right: 4rem;
+}
+h1{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+.container-moda .main-container .ropa-container .shirts-container{
+}
+  
+h1{
+  margin-top: 2rem;
+  color: #146eb4;
+}
+    
+
+
+ h2{
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.container-moda .main-container .ropa-container .pants-container{
+
+    margin-top: 2rem;
+    
+  
+}
+
+
+.container-moda .main-container .ropa-container .card-grid{
+  display: grid;  
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.container-moda .main-container .promo-container{
+
+    padding-left: 4rem ;
+    padding-right: 4rem;
+}
+
+.container-moda .main-container .promo-container .promo-card{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centra todo */
+  gap: 5rem;
+
+    
+    
+}
+
+.container-moda .main-container .promo-container .promo-card .card{
+  flex: 1 1 300px;    /* ancho base de 300px pero puede crecer o reducirse */
+  min-width: 280px;   /* no dejar que se hagan más pequeñas que esto */
+  max-width: 40%; 
+    
+}
+
