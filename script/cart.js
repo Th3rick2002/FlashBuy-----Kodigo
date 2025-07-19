@@ -1,21 +1,24 @@
-//card
+//card menu
 const btnCart = document.getElementById('shop-card')
 const closeCartBtn = document.getElementById('close-cart-btn')
 const asideCart = document.getElementById('cart-menu')
 
+// mostrar aside con el carrito de compras
 function toggleMenu() {
     asideCart.classList.toggle('open');
 }
 
+// cerrar aside con el carrito de compras
 function closeMenu() {
     asideCart.classList.remove('open');
 }
 
+// eventos para abrir y cerrar aside
 btnCart.addEventListener('click', toggleMenu)
 closeCartBtn.addEventListener('click', closeMenu)
 
 
-//function agregate products at the shopping cart
+// funcion para obtener productos desde el localstorage
 function getProducts() {
     const row = document.getElementById('table-row')
     row.innerHTML = ''
@@ -39,6 +42,7 @@ function getProducts() {
     })
 }
 
+// funcion para agregar un producto al carrito y guardar en localstorage
 function agregateProducts(product, precio, cantidad) {
     let products = []
 
@@ -52,6 +56,7 @@ function agregateProducts(product, precio, cantidad) {
     getProducts()
 }
 
+// funcion para remover un producto del carrito
 function removeProduct(product) {
     let products = []
     let productToDelete = product
@@ -66,6 +71,7 @@ function removeProduct(product) {
     getProducts()
 }
 
+// funcion para limpiar el carrito y localstorage
 function clearCart() {
     localStorage.clear()
     getProducts()
