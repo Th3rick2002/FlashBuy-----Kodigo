@@ -91,12 +91,10 @@ html,body{
 }
 
 .boton-ver-mas:hover {
-  background-color: var(--secondary-color); /* Azul vibrante */
+  background-color: var(--secondary-color); 
   transform: translateY(-2px) scale(1.03);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
 }
-
-
 
 .slide-grid {
   display: flex;
@@ -107,17 +105,16 @@ html,body{
   height: 100%;
   width: 100%;
   background-color: rgb(198, 198, 245);
-   background: linear-gradient(to bottom, #dbeafe, #c7d2fe); /* azul claro a lila */
+   background: linear-gradient(to bottom, #abffff, #506cdf); 
 }
 
 .slide-grid img {
-  width: 400px;
-  height: 350px;
+  width: 350px;
+  height: 300px;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.445);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
   
 }
 
@@ -125,9 +122,26 @@ html,body{
   transform: scale(1.05);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
-
-
-
+.slider-text-general {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  max-width: 500px;
+  background: linear-gradient(135deg, rgba(255, 153, 0, 0.85), rgba(20, 110, 180, 0.85));
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+ box-shadow: 0 2px 4px rgba(20, 110, 180, 0.15);
+  text-align: center;
+  letter-spacing: 1.2px;
+  z-index: 15;
+  user-select: none;
+ 
+}
 
 .slider-controls {
   position: absolute;
@@ -139,54 +153,88 @@ html,body{
 }
 
 .slider-controls button {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.664);
   border: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
-}
-
-.container-moda .main-container .ropa-container{
-   
-   margin-bottom: 4rem;
-      padding-left: 4rem ;
-    padding-right: 4rem;
-}
-h1{
-    text-align: center;
-    margin-bottom: 2rem;
+  color: #838383;
 }
 
 
-.container-moda .main-container .ropa-container .shirts-container{
+.container-moda .main-container .ropa-container,
+.container-moda .main-container .promo-container {
+  padding: 0 4rem;
+  margin-bottom: 4rem;
 }
-  
-h1{
+
+.container-moda .main-container .ropa-container .shirts-container,
+.container-moda .main-container .ropa-container .pants-container {
   margin-top: 2rem;
-  color: #146eb4;
-}
-    
-
-
- h2{
-    margin-bottom: 1rem;
-    text-align: left;
 }
 
-.container-moda .main-container .ropa-container .pants-container{
-
-    margin-top: 2rem;
-    
-  
-}
-
-
-.container-moda .main-container .ropa-container .card-grid{
-  display: grid;  
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+/* ============================ */
+/*         CARD GRID            */
+/* ============================ */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 2rem;
 }
 
+/* ============================ */
+/*           CARD               */
+/* ============================ */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.card-price {
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+
+/*Promociones*/
 .container-moda .main-container .promo-container{
 
     padding-left: 4rem ;
@@ -196,7 +244,7 @@ h1{
 .container-moda .main-container .promo-container .promo-card{
     display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* centra todo */
+  justify-content: center; 
   gap: 5rem;
 
     
@@ -204,9 +252,12 @@ h1{
 }
 
 .container-moda .main-container .promo-container .promo-card .card{
-  flex: 1 1 300px;    /* ancho base de 300px pero puede crecer o reducirse */
-  min-width: 280px;   /* no dejar que se hagan más pequeñas que esto */
+  flex: 1 1 300px;   
+  min-width: 280px;   
   max-width: 40%; 
     
 }
+
+
+
 
