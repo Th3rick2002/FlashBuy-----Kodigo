@@ -1,3 +1,3 @@
 # Web-Carrito-----Kodigo
-Kenia Lixbeth Martinez Contreras - Pagina de Moda 
+Kenia Lizbeth Martinez Contreras - Pagina de Moda 
 
