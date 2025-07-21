@@ -444,11 +444,12 @@ body {
         flex-wrap: nowrap;
         gap: 1rem;
         padding: 1rem;
+        scroll-behavior: smooth;
     }
     .card {
         flex: 0 0 80%;
         scroll-snap-align: center;
-        min-width: 280px;
+        min-width: 80%;
         max-width: 80%;
     }
 
