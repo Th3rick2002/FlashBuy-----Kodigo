@@ -67,10 +67,9 @@ html,body{
   border-radius: 10px;
 }
 
-.slide-texto h2 {
+.slide-texto h1 {
   font-size: 3rem; 
   margin-bottom: 2.5rem;
- 
 }
 
 .slide-texto p {
@@ -95,6 +94,7 @@ html,body{
   transform: translateY(-2px) scale(1.03);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
 }
+
 
 .slide-grid {
   display: flex;
@@ -162,15 +162,41 @@ html,body{
 }
 
 
-.container-moda .main-container .ropa-container,
-.container-moda .main-container .promo-container {
+
+.ropa-container .titulo-ropa {
+}
+.ropa-container .titulo-ropa {
+  margin-top: 3rem;
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(270deg, #f472b6, #c084fc, #60a5fa);
+  background-size: 600% 600%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: moverGradiente 5s ease infinite;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+@keyframes moverGradiente {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/*CONTENEDOR DE ROPA CONTAINER*/
+
+.container-moda .main-container .ropa-container{
   padding: 0 4rem;
   margin-bottom: 4rem;
 }
 
+/*CONTENEDOR DE SHIRTS Y PANTS CONTAINER*/
+
 .container-moda .main-container .ropa-container .shirts-container,
 .container-moda .main-container .ropa-container .pants-container {
-  margin-top: 2rem;
+  margin-top: 6rem;
 }
 
 /* ============================ */
@@ -178,7 +204,7 @@ html,body{
 /* ============================ */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
 
@@ -187,7 +213,7 @@ html,body{
 /* ============================ */
 .card {
   background-color: #fff;
-  border-radius: 12px;
+  border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -202,8 +228,10 @@ html,body{
 
 .card-img {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
+  height: 300px;
+  object-fit: contain;
+  background-color: #f5f5f5;
+ 
 }
 
 .card-body {
@@ -212,10 +240,11 @@ html,body{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #ffffff;
 }
 
 .card-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--secondary-color);
   margin-bottom: 0.5rem;
 }
@@ -223,7 +252,7 @@ html,body{
 .card-text {
   font-size: 0.95rem;
   color: #555;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .card-price {
@@ -233,12 +262,77 @@ html,body{
   margin-bottom: 1rem;
 }
 
+.card .rating-stars {
+  color: #f0c14b; /* color amarillo tipo Amazon */
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+
+/*BTN AGREGAR CARRITO*/
+.boton-agregar-carrito{
+
+   background-color: var(--primary-color); 
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.boton-agregar-carrito:hover{
+
+   background-color: var(--secondary-color); 
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* =============== */
+/* Selector cantidad + botón juntos */
+/* =============== */
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.cantidad-input {
+  width: 60px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
 
 /*Promociones*/
+
+.card-price {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.old-price {
+  color: #888;
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+
+.promo-price {
+  color: #d62828;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
 .container-moda .main-container .promo-container{
 
-    padding-left: 4rem ;
-    padding-right: 4rem;
+  margin-top: 10rem;
+    padding: 0 4rem;
 }
 
 .container-moda .main-container .promo-container .promo-card{
@@ -259,5 +353,118 @@ html,body{
 }
 
 
+.container-moda .main-container .promo-container .promo-card .card img{
+
+  background-color: #555;
+}
+
+/* shopping cart */
+.cart-menu {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    right: -100%;
+    height: 100vh;
+    width: 35vw;
+    min-width: 600px;
+    max-width: 450px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: var(--light-background-color);
+    z-index: 1000;
+}
+
+.cart-menu.open {
+    right: 0;
+}
+
+.cart-menu__container {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.cart-menu__closedBtn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.side-cart--close-btn {
+    padding: 1rem;
+    font-size: 20px;
+    height: 2.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+    width: auto;
+}
+
+.cart-menu__table {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.cart-menu__table thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.cart-menu__table thead th {
+    padding: 0.5rem;
+    text-align: start;
+}
+
+.cart-menu__table tbody tr {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: start;
+}
+
+.cart-menu__table tbody tr td {
+    padding: 0.5rem;
+    border: 1px solid black;
+}
+
+.cart-menu__table .quantity {
+    text-align: center;
+}
+
+.cart-menu__actions {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.cart--cleanBtn {
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    background-color: #dc4242;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.cart--buyBtn {
+    padding: 0.5rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 90%;
+    margin: 0 auto;
+}
 
 

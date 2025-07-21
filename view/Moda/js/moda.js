@@ -1,6 +1,8 @@
+// Constantes para el slide, boton de preview y de siguiente
+
 const slides = document.querySelectorAll('.slide');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
 
 let currentIndex = 0;
 let slideInterval;
@@ -71,9 +73,38 @@ document.querySelectorAll('.hover-switch').forEach(img => {
   });
 });
 
+
+//LOGICA PARA BOTON VER MAS, LLEVA A LA SECCION DE CARDS DE ROPA EN CLIC
+
 document.querySelector('.boton-ver-mas').addEventListener('click', () => {
   const target = document.querySelector('#ropa');
   if (target) {
     target.scrollIntoView({ behavior: 'smooth' });
   }
 });
+
+
+//LOGICA PARA EL CARRITO
+document.addEventListener('DOMContentLoaded', () => {
+  const addToCartButtons = document.querySelectorAll('.boton-agregar-carrito');
+
+  addToCartButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const card = button.closest('.card');
+    const product = card.querySelector('.card-title').textContent;
+    const precioText = card.querySelector('.card-price').textContent.replace('$', '');
+    const precio = parseFloat(precioText);
+    const inputCantidad = card.querySelector('.cantidad-input'); // ← NUEVO
+    const cantidad = parseInt(inputCantidad.value) || 1;         // ← NUEVO
+
+    agregateProducts(product, precio, cantidad);
+    alert(`${product} agregado al carrito`);
+  });
+});
+  // Mostrar productos del carrito al cargar la página
+  getProducts();
+});
+
+
+
+
