@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnología</title>
+    <link rel="stylesheet" href="./css/tecnología.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body>
+    
+    <!-- HEADER -->
+    
+    <header class="header">
+        <div class="header__main">
+            <div class="header__logo--container">
+                <button id="hamburger-btn" class="header__logo--hamburgerButtom">☰</button>
+                <div class="header__logo--title">
+                    <a href="#">
+                        FlashBuy
+                    </a>
+                </div>
+            </div>
+            
+            <div class="header__nav">
+                <nav class="header__nav--list">
+                    <ul class="header__nav--list--items">
+                        <li id="profile" class="header__nav--list--item">
+                            <a href="#"><img src="./assets/logos/Profile.svg" alt="profile"></a>
+                        </li>
+                        <li id="shop-card" class="header__nav--list--item">
+                            <a href="#"><img src="./assets/logos/carrito-white.svg" alt="carrito"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="header__aside">
+            <nav>
+                <ul>
+                    <li><a class="nav-link" href="#">Inicio</a></li>
+                    <li><a class="nav-link" href="#">Moda</a></li>
+                    <li><a class="nav-link" href="#">ejemplo 3</a></li>
+                    <li><a class="nav-link" href="#">ejemplo 4</a></li>
+                    <li><a class="nav-link" href="#">ejemplo 5</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <aside id="side-menu" class="side-menu">
+        <button id="close-btn" class="side-menu--close-btn">x</button>
+        <ul>
+            <li><a class="nav-link" href="#">Inicio</a></li>
+            <li><a class="nav-link" href="#">Moda</a></li>
+            <li><a class="nav-link" href="#">ejemplo 3</a></li>
+            <li><a class="nav-link" href="#">ejemplo 4</a></li>
+            <li><a class="nav-link" href="#">ejemplo 5</a></li>
+        </ul>
+    </aside>
+
+    <aside id="cart-menu" class="cart-menu">
+        <div class="cart-menu__container">
+            <div class="cart-menu__closedBtn">
+                <button id="close-cart-btn" class="side-cart--close-btn">x</button>
+            </div>
+
+            <div class="cart-menu__table-content">
+                <h3>Carrito de compras</h3>
+                <table id="table-cart" class="cart-menu__table">
+                    <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="table-row" class="table-row">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="cart-menu__actions">
+                <button class="cart--cleanBtn" onclick="clearCart()">Vaciar Carrito</button>
+                <button class="cart--buyBtn">Pagar</button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <!-- CAROUSEL -->
+
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>    
+
+
+    
+    
+    
+    
+    
+    
+    <script src="./js/tecnología.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
