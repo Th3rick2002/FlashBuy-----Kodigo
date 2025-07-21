@@ -1,0 +1,33 @@
+.card {
+  border: none !important;
+  padding-top: 5em;
+}
+
+.descripcion{
+text-align: auto;
+font-size: 1rem;
+
+}
+.card-img-top{
+ width: 12em;
+ height: 12em; 
+}
+
+.estrellas {
+  color: #FFD700; /* color dorado */
+  font-size: 1.2rem;
+}
+
+.estrella.vacia {
+  color: #ccc; /* gris para estrellas no llenas */
+}
+
+.carousel-custom{
+    max-width: 300px;
+    margin: auto; /* Centrar en la página */
+  }
+
+
+
+
+
