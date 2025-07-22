@@ -432,18 +432,24 @@ body {
 
 /* categories */
 .categories-container {
-    background-color: var(--light-background-color);
-    width: 90vw;
+    width: 100%;
     height: auto;
     padding: 2rem 0;
     text-align: center;
+    margin-top: 2rem;
+}
+
+.categories-container h3 {
+    text-align: center;
+    font-size: 2rem;
 }
 
 .categories-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 90vw;
+    align-items: center;
+    width: 100%;
     height: auto;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
@@ -452,12 +458,43 @@ body {
 }
 
 .categories-content .card {
+    background-color: #146eb4;
     width: 20vw;
-    height: 22vh;
+    height: 30vh;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
 }
 
-.categories-content .card .card-link {
+.categories-content .card .card-img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+}
 
+.categories-content .card .card-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* oscurecer la imagen */
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.categories-content .card .card-content .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.categories-content .card .card-text {
+    font-size: 1.2rem;
 }
 
 
