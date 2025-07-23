@@ -9,27 +9,86 @@
     <title>Moda</title>
 </head>
 <body>
-    <div class="container-moda">
-     <header class="">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid background">
-                <a class="navbar-brand" href="#">FlashBuy</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="#">Moda</a>
-                        <a class="nav-link" href="#">ejemplo 3</a>
-                        <a class="nav-link" href="#">ejemplo 4</a>
-                        <a class="nav-link" href="#">ejemplo 5</a>
-                    </div>
+    <header class="header">
+        <div class="header__main">
+            <div class="header__logo--container">
+                <button id="hamburger-btn" class="header__logo--hamburgerButtom">☰</button>
+                <div class="header__logo--title">
+                    <a href="#">
+                        FlashBuy
+                    </a>
                 </div>
             </div>
-        </nav>
+
+            <div class="header__nav">
+                <nav class="header__nav--list">
+                    <ul class="header__nav--list--items">
+                        <li id="profile" class="header__nav--list--item">
+                            <a href="#"><img src="../../assets/logos/Profile.svg" alt="profile"></a>
+                        </li>
+                        <li id="shop-card" class="header__nav--list--item">
+                            <a href="#"><img src="../../assets/logos/carrito-white.svg" alt="carrito"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="header__aside">
+            <nav>
+                <ul>
+                    <li><a class="nav-link" href="../../index.html">Inicio</a></li>
+                    <li><a class="nav-link" href="./moda.html">Moda</a></li>
+                    <li><a class="nav-link" href="../Tecnología/tecnología.html">Tecnología</a></li>
+                    <li><a class="nav-link" href="#">ejemplo 4</a></li>
+                    <li><a class="nav-link" href="#">ejemplo 5</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
+    <aside id="side-menu" class="side-menu">
+        <button id="close-btn" class="side-menu--close-btn">x</button>
+        <ul>
+            <li><a class="nav-link" href="../../index.html">Inicio</a></li>
+            <li><a class="nav-link" href="./moda.html">Moda</a></li>
+            <li><a class="nav-link" href="../Tecnología/tecnología.html">Tecnoloía</a></li>
+            <li><a class="nav-link" href="#">ejemplo 4</a></li>
+            <li><a class="nav-link" href="#">ejemplo 5</a></li>
+        </ul>
+    </aside>
+
+    <aside id="cart-menu" class="cart-menu">
+        <div class="cart-menu__container">
+            <div class="cart-menu__closedBtn">
+                <button id="close-cart-btn" class="side-cart--close-btn">x</button>
+            </div>
+
+            <div class="cart-menu__table-content">
+                <h3>Carrito de compras</h3>
+                <table id="table-cart" class="cart-menu__table">
+                    <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody id="table-row" class="table-row">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="cart-menu__actions">
+                <button class="cart--cleanBtn" onclick="clearCart()">Vaciar Carrito</button>
+                <button class="cart--buyBtn">Pagar</button>
+            </div>
+        </div>
+    </aside>
+
+    <div class="container-moda">
 
     <main class="main-container">
             <!--CARRUSEL-->
@@ -81,7 +140,7 @@
     <h2>Camisas</h2>
     <div class="card-grid">
       <div class="card">
-        <img src="assets/images/camisa1.jpg" alt="Camisa 1" class="card-img">
+        <img src="./assets/images/camisa1.jpg" alt="Camisa 1" class="card-img">
         <div class="card-body">
           <h3 class="card-title">Camisa Casual</h3>
           <p class="card-text">Fresca, moderna y disponible en varios colores.</p>
@@ -91,7 +150,7 @@
       </div>
 
       <div class="card">
-        <img src="assets/images/camisa2.jpg" alt="Camisa 2" class="card-img">
+        <img src="./assets/images/camisa2.jpg" alt="Camisa 2" class="card-img">
         <div class="card-body">
           <h3 class="card-title">Camisa Formal</h3>
           <p class="card-text">Perfecta para oficina o reuniones elegantes.</p>
@@ -209,12 +268,72 @@
 </section>
     </main>
 
-      <footer class="">
-        <p>Derechos reservados - Grupo #4</p>
-    </footer>
+        <footer class="footer">
+            <div class="footer__container">
+                <div>
+                    <div class="footer__container--logo">
+                        <h2>FlashBuy</h2>
+                    </div>
+                    <div class="footer__container--contact">
+                        <p>Suscríbete para obtener las mejores ofertas</p>
+                        <label class="footer__container--label">
+                            <input type="text" placeholder="Email">
+                            <button>Suscribirse</button>
+                        </label>
+                        <p><img class="icon" src="../../assets/logos/phone-flip-svgrepo-com.svg" alt="phone"> 2298-3777</p>
+                    </div>
+                    <div class="footer__container--social-media">
+                        <p>Siguenos en nuestras redes sociales</p>
+                        <div class="footer__container--social-media-icon">
+                            <a href="https://www.facebook.com/">
+                                <img class="social-media-icon" src="../../assets/logos/facebook-round-svgrepo-com.svg" alt="facebook">
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <img class="social-media-icon" src="../../assets/logos/instagram-round-svgrepo-com.svg" alt="instagram">
+                            </a>
+                            <a href="https://www.youtube.com/">
+                                <img class="social-media-icon" src="../../assets/logos/youtube-168-svgrepo-com.svg" alt="youtube">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__container--info-items">
+                    <h4 class="footer__container--title">CORPORATIVO</h4>
+                    <ul class="footer__container--list">
+                        <li><a class="footer-link" href="#">Quienes Somos</a></li>
+                        <li><a class="footer-link" href="#">Visión y Misión</a></li>
+                        <li><a class="footer-link" href="#">Historia</a></li>
+                        <li><a class="footer-link" href="#">Sucursales</a></li>
+                        <li><a class="footer-link" href="#">Servicios</a></li>
+                    </ul>
+                </div>
+                <div class="footer__container--info-items">
+                    <h4 class="footer__container--title">PROGRAMAS</h4>
+                    <ul class="footer__container--list">
+                        <li><a class="footer-link" href="#">Certificados de Regalo</a></li>
+                        <li><a class="footer-link" href="#">Garantias</a></li>
+                        <li><a class="footer-link" href="#">Plan Pro</a></li>
+                        <li><a class="footer-link" href="#">Credito</a></li>
+                        <li><a class="footer-link" href="#">Marketplace</a></li>
+                    </ul>
+                </div>
+                <div class="footer__container--info-items">
+                    <h4 class="footer__container--title">SERVICIO AL CLIENTE</h4>
+                    <ul class="footer__container--list">
+                        <li><a class="footer-link" href="#">Politica de Devoluciones</a></li>
+                        <li><a class="footer-link" href="#">Cotactenos</a></li>
+                        <li><a class="footer-link" href="#">Seguridad del Sitio</a></li>
+                        <li><a class="footer-link" href="#">Politica de Privacidad</a></li>
+                        <li><a class="footer-link" href="#">Terminos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     
 
     <script src="./js/moda.js"></script>
+    <script src="../../script/asideMenu.js" defer></script>
+    <script src="../../script/cart.js" defer></script>
 </body>
 
 </html>

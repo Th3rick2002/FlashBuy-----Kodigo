@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FlashBuy</title>
-    <link rel="stylesheet" href="./style/Home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnología</title>
+    <link rel="stylesheet" href="./css/tecnología.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 <body>
+    
+    <!-- HEADER -->
     <header class="header">
         <div class="header__main">
             <div class="header__logo--container">
@@ -21,10 +25,10 @@
                 <nav class="header__nav--list">
                     <ul class="header__nav--list--items">
                         <li id="profile" class="header__nav--list--item">
-                            <a href="#"><img src="./assets/logos/Profile.svg" alt="profile"></a>
+                            <a href="#"><img src="../../assets/logos/Profile.svg" alt="profile"></a>
                         </li>
                         <li id="shop-card" class="header__nav--list--item">
-                            <a href="#"><img src="./assets/logos/carrito-white.svg" alt="carrito"></a>
+                            <a href="#"><img src="../../assets/logos/carrito-white.svg" alt="carrito"></a>
                         </li>
                     </ul>
                 </nav>
@@ -34,9 +38,9 @@
         <div class="header__aside">
             <nav>
                 <ul>
-                    <li><a class="nav-link" href="./index.html">Inicio</a></li>
-                    <li><a class="nav-link" href="./view/Moda/moda.html">Moda</a></li>
-                    <li><a class="nav-link" href="./view/Tecnología/tecnología.html">Tecnología</a></li>
+                    <li><a class="nav-link" href="../../index.html">Inicio</a></li>
+                    <li><a class="nav-link" href="../../view/Moda/moda.html">Moda</a></li>
+                    <li><a class="nav-link" href="../../view/Tecnología/tecnología.html">Tecnología</a></li>
                     <li><a class="nav-link" href="#">ejemplo 4</a></li>
                     <li><a class="nav-link" href="#">ejemplo 5</a></li>
                 </ul>
@@ -47,9 +51,9 @@
     <aside id="side-menu" class="side-menu">
         <button id="close-btn" class="side-menu--close-btn">x</button>
         <ul>
-            <li><a class="nav-link" href="./index.html">Inicio</a></li>
-            <li><a class="nav-link" href="./view/Moda/moda.html">Moda</a></li>
-            <li><a class="nav-link" href="./view/Tecnología/tecnología.html">Tecnologías</a></li>
+            <li><a class="nav-link" href="../../index.html">Inicio</a></li>
+            <li><a class="nav-link" href="../../view/Moda/moda.html">Moda</a></li>
+            <li><a class="nav-link" href="../../view/Tecnología/tecnología.html">ejemplo 3</a></li>
             <li><a class="nav-link" href="#">ejemplo 4</a></li>
             <li><a class="nav-link" href="#">ejemplo 5</a></li>
         </ul>
@@ -85,87 +89,76 @@
         </div>
     </aside>
 
+    <!-- MAIN CONTENT -->
+
     <main class="main-content">
-        <section class="slideshow">
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <div>
-                        <img
-                                id="imgSlides1"
-                                src="assets/carousel-img-1.gif"
-                                alt="slides-1"
-                        >
-                    </div>
-                </div>
 
-                <div class="mySlides fade">
-                    <div>
-                        <img
-                                id="imgSlides2"
-                                src="assets/carousel-img-2.webp"
-                                alt="slides-2"
-                        >
-                    </div>
-                </div>
+    <!-- CAROUSEL -->
 
-                <div class="mySlides fade">
-                    <div>
-                        <img
-                                id="imgSlides3"
-                                src="assets/carousel-img-3.webp"
-                                alt="slides-3"
-                        >
-                    </div>
-                </div>
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./assets/images/carrusel1.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/images/carrusel2.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/images/carrusel3.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev control_prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next control_next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>    
 
-                <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-                <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    <!-- PRODUCTOS -->
 
-                <div class="mySlides__items">
-                    <div class="mySlides__items--buttons">
-
-                    </div>
-                </div>
+    <div class="products_title">
+        <h2>Productos destacados</h2>
+    </div>
+    
+    <div class="products_container">
+        <div class="card" style="width: 18rem;">
+            <img src="./assets/images/card1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">ASUS ROG Zephyrus G15</h5>
+                <p class="card-text">$1299.00</p>
+                <a href="#" class="btn btn-primary button">Agregar al carrito</a>
             </div>
-        </section>
+        </div>
 
-        <section class="categories-container">
-            <h3>Nuestras categorias</h3>
-            <div class="categories-content">
-                <div class="card">
-                    <img class="card-img" src="./assets/moda-category.jpg">
-                    <div class="card-content">
-                        <h5 class="card-title">Moda</h5>
-                        <p class="card-text">Ropa para dama y caballero</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img class="card-img" src="./assets/ropa-niños.jpg">
-                    <div class="card-content">
-                        <h5 class="card-title">Ropa de niños</h5>
-                        <p class="card-text">Ropa para niños y niñas</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img class="card-img" src="./assets/tecnologia.jpg">
-                    <div class="card-content">
-                        <h5 class="card-title">Tecnología</h5>
-                        <p class="card-text">Celulares y Tablets</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img class="card-img" src="./assets/moda-category.jpg">
-                    <div class="card-content">
-                        <h5 class="card-title">Moda</h5>
-                        <p class="card-text">Ropa para dama y caballero</p>
-                    </div>
-                </div>
+        <div class="card" style="width: 18rem;">
+            <img src="./assets/images/card2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Samsung Galaxy S25 Ultra</h5>
+                <p class="card-text">$1379.00</p>
+                <a href="#" class="btn btn-primary button">Agregar al carrito</a>
             </div>
-        </section>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="./assets/images/card3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Apple Watch Ultra 2</h5>
+                <p class="card-text">$1119.00</p>
+                <a href="#" class="btn btn-primary button">Agregar al carrito</a>
+            </div>
+        </div>
+    </div>
     </main>
+
+    <!-- FOOTER -->
 
     <footer class="footer">
         <div class="footer__container">
@@ -179,19 +172,19 @@
                         <input type="text" placeholder="Email">
                         <button>Suscribirse</button>
                     </label>
-                    <p><img class="icon" src="./assets/logos/phone-flip-svgrepo-com.svg" alt="phone"> 2298-3777</p>
+                    <p><img class="icon" src="../../assets/logos/phone-flip-svgrepo-com.svg" alt="phone"> 2298-3777</p>
                 </div>
                 <div class="footer__container--social-media">
                     <p>Siguenos en nuestras redes sociales</p>
                     <div class="footer__container--social-media-icon">
                         <a href="https://www.facebook.com/">
-                            <img class="social-media-icon" src="./assets/logos/facebook-round-svgrepo-com.svg" alt="facebook">
+                            <img class="social-media-icon" src="../../assets/logos/facebook-round-svgrepo-com.svg" alt="facebook">
                         </a>
                         <a href="https://www.instagram.com/">
-                            <img class="social-media-icon" src="./assets/logos/instagram-round-svgrepo-com.svg" alt="instagram">
+                            <img class="social-media-icon" src="../../assets/logos/instagram-round-svgrepo-com.svg" alt="instagram">
                         </a>
                         <a href="https://www.youtube.com/">
-                            <img class="social-media-icon" src="./assets/logos/youtube-168-svgrepo-com.svg" alt="youtube">
+                            <img class="social-media-icon" src="../../assets/logos/youtube-168-svgrepo-com.svg" alt="youtube">
                         </a>
                     </div>
                 </div>
@@ -228,8 +221,9 @@
             </div>
         </div>
     </footer>
+    
 </body>
-<script src="script/asideMenu.js"></script>
-<script src="./script/slideshow.js"></script>
-<script src="./script/cart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script src="../../script/asideMenu.js"></script>
+<script src="../../script/cart.js"></script>
 </html>
