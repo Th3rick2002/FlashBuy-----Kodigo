@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
    <link rel="stylesheet" href="./css/moda.css">
+   
     <title>Moda</title>
 </head>
 <body>
@@ -57,7 +58,6 @@
             <li><a class="nav-link" href="#">ejemplo 5</a></li>
         </ul>
     </aside>
-
     <aside id="cart-menu" class="cart-menu">
         <div class="cart-menu__container">
             <div class="cart-menu__closedBtn">
@@ -88,7 +88,7 @@
         </div>
     </aside>
 
-    <div class="container-moda">
+   <div class="container-moda">
 
     <main class="main-container">
             <!--CARRUSEL-->
@@ -99,7 +99,7 @@
       
       <img src="./assets/images/img-banner.jpg" alt="imagen principal del banner" />
       <div class="slide-texto">
-        <h2>Tu estilo empieza aquí</h2>
+        <h1>Tu estilo empieza aquí</h1>
         <p>Descubrí lo último en moda.</p>
        <button class="boton-ver-mas">Ver Más</button>
 
@@ -126,57 +126,85 @@
 
   <!-- Botones -->
   <div class="slider-controls">
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
+    <button class="prev-btn">&#10094;</button>
+    <button class="next-btn">&#10095;</button>
   </div>
 </section>
 
               <!--CARDs-->
   <section class="ropa-container" id="ropa">
-  <h1>Descubre las nuevas tendencias</h1>
+  <h2 class="titulo-ropa">Descubre las nuevas tendencias</h2>
 
   <!-- Camisas -->
   <section class="shirts-container">
-    <h2>Camisas</h2>
+    <h2 class="h2-section">Parte Superior</h2>
     <div class="card-grid">
       <div class="card">
-        <img src="./assets/images/camisa1.jpg" alt="Camisa 1" class="card-img">
+        <img src="./assets/images/shirt1-man.png" alt="Camisa 1" class="card-img">
         <div class="card-body">
-          <h3 class="card-title">Camisa Casual</h3>
-          <p class="card-text">Fresca, moderna y disponible en varios colores.</p>
+          <h3 class="card-title">Camisa Lino Azul Claro</h3>
+          <div class="rating-stars">
+            ★★★★☆ <span class="rating-count">(125)</span>
+          </div>
+    <p class="delivery-date">Entrega estimada: <strong>24 - 26 de julio</strong></p>
+          <p class="card-text">Elegante y fresca, perfecta para un look relajado de verano con su diseño ligero y transpirable en lino.</p>
           <p class="card-price">$24.99</p>
-          <button class="boton-ver-mas">Agregar al carrito</button>
+          <div class="card-actions">
+          <input type="number" class="cantidad-input" min="1" value="1">
+          <button class="boton-agregar-carrito">Agregar al carrito</button>
         </div>
+      </div>
       </div>
 
       <div class="card">
-        <img src="./assets/images/camisa2.jpg" alt="Camisa 2" class="card-img">
+        <img src="./assets/images/shirt2-woman.png" alt="Camisa 2" class="card-img">
         <div class="card-body">
-          <h3 class="card-title">Camisa Formal</h3>
-          <p class="card-text">Perfecta para oficina o reuniones elegantes.</p>
-          <p class="card-price">$32.00</p>
-          <button class="boton-ver-mas">Agregar al carrito</button>
+          <h3 class="card-title">Blusa Verde Escama</h3>
+           <div class="rating-stars">
+            ★★★★☆ <span class="rating-count">(140)</span>
+          </div>
+    <p class="delivery-date">Entrega estimada: <strong>22 - 24 de julio</strong></p>
+          <p class="card-text">Estilosa y cómoda, ideal para un look casual.</p>
+          <p class="card-price">$20.00</p>
+          <div class="card-actions">
+          <input type="number" class="cantidad-input" min="1" value="1">
+          <button class="boton-agregar-carrito">Agregar al carrito</button>
         </div>
+      </div>
       </div>
 
       <div class="card">
-        <img src="assets/images/camisa2.jpg" alt="Camisa 2" class="card-img">
+        <img src="./assets/images/shirt3-man.png" alt="Camisa 2" class="card-img">
         <div class="card-body">
-          <h3 class="card-title">Camisa Formal</h3>
-          <p class="card-text">Perfecta para oficina o reuniones elegantes.</p>
+          <h3 class="card-title">Camisa Lino Verde Claro</h3>
+           <div class="rating-stars">
+            ★★★★☆ <span class="rating-count">(170)</span>
+          </div>
+    <p class="delivery-date">Entrega estimada: <strong>28 - 30 de julio</strong></p>
+          <p class="card-text">Fresca y versátil, perfecta para un estilo casual y relajado..</p>
           <p class="card-price">$32.00</p>
-          <button class="boton-ver-mas">Agregar al carrito</button>
+          <div class="card-actions">
+          <input type="number" class="cantidad-input" min="1" value="1">
+          <button class="boton-agregar-carrito">Agregar al carrito</button>
         </div>
+      </div>
       </div>
 
       <div class="card">
-        <img src="assets/images/camisa2.jpg" alt="Camisa 2" class="card-img">
+        <img src="./assets/images/shirt4-woman.png" alt="Camisa 2" class="card-img">
         <div class="card-body">
-          <h3 class="card-title">Camisa Formal</h3>
-          <p class="card-text">Perfecta para oficina o reuniones elegantes.</p>
-          <p class="card-price">$32.00</p>
-          <button class="boton-ver-mas">Agregar al carrito</button>
+          <h3 class="card-title">Top Negro Básico</h3>
+           <div class="rating-stars">
+            ★★★★☆ <span class="rating-count">(198)</span>
+          </div>
+    <p class="delivery-date">Entrega estimada: <strong>24 - 26 de julio</strong></p>
+          <p class="card-text">Elegante y ajustado, ideal para cualquier ocasión casual.</p>
+          <p class="card-price">$19.00</p>
+          <div class="card-actions">
+          <input type="number" class="cantidad-input" min="1" value="1">
+          <button class="boton-agregar-carrito">Agregar al carrito</button>
         </div>
+      </div>
       </div>
     
     </div>
@@ -184,88 +212,126 @@
 
   <!-- Pantalones -->
  <section class="pants-container">
-  <h2>Pantalones</h2>
+  <h2 class="h2-section">Parte Inferior</h2>
   <div class="card-grid">
     <div class="card">
-      <img src="assets/images/pantalon1.jpg" alt="Pantalón 1" class="card-img">
+      <img src="./assets/images/pants1-man.png" alt="Pantalón 1" class="card-img">
       <div class="card-body">
-        <h3 class="card-title">Jeans Clásicos</h3>
-        <p class="card-text">Ajuste perfecto y durabilidad garantizada.</p>
-        <p class="card-price">$35.00</p>
-        <button class="boton-ver-mas">Agregar al carrito</button>
+        <h3 class="card-title">Jeans Anchos Azules</h3>
+         <div class="rating-stars">
+            ★★★★☆ <span class="rating-count">(203)</span>
+          </div>
+    <p class="delivery-date">Entrega estimada: <strong>29 - 03 de agosto</strong></p>
+        <p class="card-text">Estilo retro y cómodo, perfectos para un look urbano.</p>
+        <p class="card-price">$18.00</p>
+          <div class="card-actions">
+          <input type="number" class="cantidad-input" min="1" value="1">
+          <button class="boton-agregar-carrito">Agregar al carrito</button>
+        </div>
       </div>
-    </div>
+      </div>
 
     <div class="card">
-      <img src="assets/images/pantalon2.jpg" alt="Pantalón 2" class="card-img">
+      <img src="./assets/images/pants2-woman.png" alt="Pantalón 2" class="card-img">
       <div class="card-body">
-        <h3 class="card-title">Joggers Urbanos</h3>
-        <p class="card-text">Estilo urbano con comodidad total.</p>
+        <h3 class="card-title">Pantalones Anchos Rosa Vibrante</h3>
+         <div class="rating-stars">
+            ★★★★☆ <span class="rating-count">(1,202)</span>
+          </div>
+    <p class="delivery-date">Entrega estimada: <strong>06 - 12 de agosto</strong></p>
+        <p class="card-text">Estilizados y cómodos, ideales para un look veraniego.</p>
         <p class="card-price">$29.50</p>
-        <button class="boton-ver-mas">Agregar al carrito</button>
+          <div class="card-actions">
+          <input type="number" class="cantidad-input" min="1" value="1">
+          <button class="boton-agregar-carrito">Agregar al carrito</button>
+        </div>
       </div>
-    </div>
+      </div>
 
     <div class="card">
-      <img src="assets/images/pantalon2.jpg" alt="Pantalón 2" class="card-img">
+      <img src="./assets/images/pants3-man.png" alt="Pantalón 2" class="card-img">
       <div class="card-body">
-        <h3 class="card-title">Joggers Urbanos</h3>
-        <p class="card-text">Estilo urbano con comodidad total.</p>
-        <p class="card-price">$29.50</p>
-        <button class="boton-ver-mas">Agregar al carrito</button>
+        <h3 class="card-title">Pantalones Chinos Verde Oliva</h3>
+         <div class="rating-stars">
+            ★★★★☆ <span class="rating-count">(34)</span>
+          </div>
+    <p class="delivery-date">Entrega estimada: <strong>24 - 26 de julio</strong></p>
+        <p class="card-text">Estilo moderno y cómodo, ideales para el día a día.</p>
+        <p class="card-price">$20.00</p>
+          <div class="card-actions">
+          <input type="number" class="cantidad-input" min="1" value="1">
+          <button class="boton-agregar-carrito">Agregar al carrito</button>
+        </div>
       </div>
-    </div>
+      </div>
 
     <div class="card">
-      <img src="assets/images/pantalon2.jpg" alt="Pantalón 2" class="card-img">
+      <img src="./assets/images/pants4-woman.png" alt="Pantalón 2" class="card-img">
       <div class="card-body">
-        <h3 class="card-title">Joggers Urbanos</h3>
-        <p class="card-text">Estilo urbano con comodidad total.</p>
-        <p class="card-price">$29.50</p>
-        <button class="boton-ver-mas">Agregar al carrito</button>
+        <h3 class="card-title">Jeans Anchos Clásicos</h3>
+         <div class="rating-stars">
+            ★★★★☆ <span class="rating-count">(300)</span>
+          </div>
+    <p class="delivery-date">Entrega estimada: <strong>24 - 26 de julio</strong></p>
+        <p class="card-text">Cómodos y versátiles, perfectos para un estilo casual.</p>
+        <p class="card-price">$25.50</p>
+          <div class="card-actions">
+          <input type="number" class="cantidad-input" min="1" value="1">
+          <button class="boton-agregar-carrito">Agregar al carrito</button>
+        </div>
       </div>
-    </div>
+      </div>
   </div>
 </section>
               <!--PROMOCIONES-->
 
-    <section class="promo-container">
+<section class="promo-container">
+  <h2 class="h2-section">¡Ofertas Especiales!</h2>
 
-      <h2>oferta!</h2>
+  <section class="promo-card">
 
-      <section class="promo-card">
-
-<div class="card mb-3" >
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="..." class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+    <div class="card mb-3 promo-animate">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="./assets/images/shirt-woman-promo.jpg" class="img-fluid rounded-start" alt="Mono Naranja Elegante">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title-promo">Oferta Exclusiva: Mono Naranja Elegante</h5>
+            <p class="card-text-promo">¡Descuento especial! Mono de verano con lazo, ideal para destacar.</p>
+            <p class="card-price-promo">
+              <span class="old-price">$49.99</span>
+              <span class="promo-price">$29.99</span>  
+        <button class="btn-add-to-cart">Agregar al carrito</button>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<div class="card mb-3" >
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="..." class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+    <div class="card mb-3 promo-animate">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="./assets/images/pants-man-promo.jpg" class="img-fluid rounded-start" alt="Conjunto Deportivo Azul Claro">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title-promo">Oferta Exclusiva: Conjunto Deportivo Azul Claro</h5>
+            <p class="card-text-promo">Cómodo y elegante, perfecto para entrenar o relajarse.</p>
+            <p class="card-price-promo">
+              <span class="old-price">$39.99</span>
+              <span class="promo-price">$24.99</span>
+        <button class="btn-add-to-cart">Agregar al carrito</button>
+
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+
+  </section>
 </section>
-</section>
+
     </main>
 
         <footer class="footer">
@@ -331,9 +397,41 @@
         </footer>
     
 
-    <script src="./js/moda.js"></script>
+    <!-- Carrito de compras -->
+ <aside id="cart-menu" class="cart-menu">
+        <div class="cart-menu__container">
+            <div class="cart-menu__closedBtn">
+                <button id="close-cart-btn" class="side-cart--close-btn">x</button>
+            </div>
+
+            <div class="cart-menu__table-content">
+                <h3>Carrito de compras</h3>
+                <table id="table-cart" class="cart-menu__table">
+                    <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                        <th>Eliminar</th>
+                    </tr>
+                    </thead>
+                    <tbody id="table-row" class="table-row">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="cart-menu__actions">
+                <button class="cart--cleanBtn" onclick="clearCart()">Vaciar Carrito</button>
+                <button class="cart--buyBtn">Pagar</button>
+            </div>
+        </div>
+    </aside>
+    </div>
+<script src="/script/cart.js" defer></script>
+    <script src="./js/moda.js" defer></script>
     <script src="../../script/asideMenu.js" defer></script>
-    <script src="../../script/cart.js" defer></script>
+  
 </body>
 
 </html>
