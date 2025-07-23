@@ -353,7 +353,7 @@ body {
     }
 
     .cart-menu__table thead {
-        display: none; 
+        display: none;
     }
 
     .cart-menu__table tbody tr {
@@ -379,9 +379,17 @@ body {
 
 
 .carousel-inner img {
-  width: 100%;
-  height: 700px;
-  object-fit: cover;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 700px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .carousel-inner img {
+        max-height: 400px;
+    }
 }
 
 
@@ -401,7 +409,7 @@ body {
 }
 
 .products_title:hover {
-    color: var(--primary-color);
+    color: var(--primary-color); /* cambio de color al hacer click en "Productos destacados"*/
 }
 
 /* Cards */
@@ -453,8 +461,19 @@ body {
         max-width: 80%;
     }
 
-    .card img {
+    .products_container.card {
+        flex: 0 0 300px;
+    }
+
+    /*.card img {
         max-height: 300px;
+        max-width: 100%;
+    }*/
+
+    .card img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 }
 
