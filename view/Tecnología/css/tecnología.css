@@ -189,7 +189,7 @@ body {
     left: 0;
 }
 
-.aside-menu--close-btn {
+.aside-menu-closebtn {
     padding: 1rem;
     font-size: 20px;
     height: 2.5rem;
@@ -226,15 +226,16 @@ body {
 
 
 .carousel-inner img {
-  width: 100%;
-  height: 700px;
-  object-fit: cover;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 700px;
+    object-fit: cover;
 }
 
 @media (max-width: 768px) {
     .carousel-inner img {
         max-height: 400px;
-        height: auto;
     }
 }
 
@@ -255,7 +256,7 @@ body {
 }
 
 .products_title:hover {
-    color: var(--primary-color);
+    color: var(--primary-color); /* cambio de color al hacer click en "Productos destacados"*/
 }
 
 /* Cards */
@@ -292,28 +293,22 @@ body {
 
 @media(max-width: 768px) {
     .products_container {
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
         display: flex;
         flex-wrap: nowrap;
         gap: 1rem;
         padding: 1rem;
-        scroll-behavior: smooth;
     }
 
-    .products_container::-webkit-scrollbar {
-        display: none;
-    }
-
-    .card {
-        flex: 0 0 80%;
-        scroll-snap-align: center;
-        min-width: 80%;
-        max-width: 80%;
+    .products_container.card {
+        flex: 0 0 300px;
+        max-height: 300px;
+        max-width: 100%;
     }
 
     .card img {
-        max-height: 300px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 }
 
