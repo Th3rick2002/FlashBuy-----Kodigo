@@ -1,33 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+/*cards*/
 .card {
-  border: none !important;
-  padding-top: 5em;
+    border: none !important;
+    padding-top: 2.5em;
 }
 
-.descripcion{
-text-align: auto;
-font-size: 1rem;
-
-}
-.card-img-top{
- width: 12em;
- height: 12em; 
+.descripcion {
+    text-align: center;
+    font-size: 1rem;
 }
 
+.card-img-top {
+    width: 10em;
+    height: 12em;
+
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.card-body .btn {
+    margin-top: auto;
+}
+
+/*estrellitas */
 .estrellas {
-  color: #FFD700; /* color dorado */
-  font-size: 1.2rem;
+    color: #FFD700;
+    /* color dorado */
+    font-size: 1.2rem;
 }
 
 .estrella.vacia {
-  color: #ccc; /* gris para estrellas no llenas */
+    color: #ccc;
+    /* gris para estrellas no llenas */
 }
 
-.carousel-custom{
-    max-width: 300px;
-    margin: auto; /* Centrar en la página */
-  }
+/* parte de carrusel*/
+.custom-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-images img.active {
+    display: block;
+}
+
+button#prevBtn,
+button#nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+/*imagen tipo barness*/
+.galeria-productos {
+    width: 100%;
+    margin-top: 2em;
+    text-align: center;
+}
 
 
+.contenedor-imagenes {
+    width: 100%;
+    overflow: hidden;
+}
 
+.contenedor-imagenes img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
 
-
+.titulo-principal h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    color: #146eb4;
+    text-align: center;
+    margin-top: 1em;
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(-20px);
+}
